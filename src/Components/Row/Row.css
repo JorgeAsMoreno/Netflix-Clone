@@ -1,0 +1,59 @@
+.row {
+  margin: 3vw 0 3vw 4%;
+}
+
+.row h2 {
+  display: table-cell;
+  font-size: 1.4vw;
+  line-height: 1.25vw;
+  vertical-align: bottom;
+}
+
+.row-posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.row-posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row-post {
+  max-height: 100px;
+  margin-right: 10px;
+  object-fit: contain;
+  transition: transform 450ms;
+  width: 100%;
+}
+
+.row-post:hover {
+  cursor: pointer;
+  transform: scale(1.09);
+}
+
+.row_postLarge {
+  max-height: 250px;
+}
+
+.row_postLarge:hover {
+  cursor: pointer;
+  transform: scale(1.09);
+}
+
+@media screen and (min-width: 1200px) {
+  .row_postLarge {
+    max-height: 400px !important;
+  }
+
+  .row-post {
+    max-height: 170px;
+  }
+
+  .row_postLarge:hover,
+  .row-post:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+}
